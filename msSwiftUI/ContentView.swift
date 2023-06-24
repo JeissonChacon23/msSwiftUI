@@ -13,27 +13,11 @@ struct ContentView: View {
         // VStack --> Vertical
         // HStack --> Horizontal
         VStack {
-            HStack {
-                Text("1.) ")
-                Text("2.) ")
-                Text("3.) ")
-                Text("4.) ")
-                Text("5.) ")
-            }
-            HStack {
-                Text("1.) ")
-                Text("2.) ")
-                Text("3.) ")
-                Text("4.) ")
-                Text("5.) ")
-            }
-            HStack {
-                Text("1.) ")
-                Text("2.) ")
-                Text("3.) ")
-                Text("4.) ")
-                Text("5.) ")
-            }
+            //Command + click --> Extract Subview
+            subvista()
+            subvista()
+            subvista()
+            subvista()
         }
     }
 }
@@ -41,5 +25,17 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct subvista: View {
+    var body: some View {
+        HStack {
+            Text("1.) ")
+            Text("2.) ")
+            Text("3.) ")
+            Text("4.) ")
+            Text("5.) ")
+        }
     }
 }
