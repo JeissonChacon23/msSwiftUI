@@ -12,11 +12,13 @@ struct ContentView: View {
     var body: some View {
         // VStack --> Vertical
         // HStack --> Horizontal
-        VStack {
-            //id: \.self --> Indicates that you are going to select each of the data inside the array
-            ForEach(nombres, id:\.self){
-                nombre in Text("\(nombre)")
+        NavigationView{
+            List{
+                ForEach(nombres, id:\.self){
+                    nombre in Text("\(nombre)")
+                }
             }
+            .navigationTitle("Full Name")
         }
     }
 }
