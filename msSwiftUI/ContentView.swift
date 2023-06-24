@@ -10,17 +10,31 @@ import SwiftUI
 struct ContentView: View {
     let nombres = ["Jeisson", "Javier", "Chacon", "Parada"]
     var body: some View {
+        // VStack --> Vertical
+        // HStack --> Horizontal
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-                .multilineTextAlignment(.center)
-                .padding()
-                .foregroundColor(.blue)
-                Label("Persona", systemImage: "person.fill")
+            HStack {
+                Text("1.) ")
+                Text("2.) ")
+                Text("3.) ")
+                Text("4.) ")
+                Text("5.) ")
+            }
+            HStack {
+                Text("1.) ")
+                Text("2.) ")
+                Text("3.) ")
+                Text("4.) ")
+                Text("5.) ")
+            }
+            HStack {
+                Text("1.) ")
+                Text("2.) ")
+                Text("3.) ")
+                Text("4.) ")
+                Text("5.) ")
+            }
         }
-        
     }
 }
 
