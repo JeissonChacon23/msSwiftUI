@@ -13,11 +13,10 @@ struct ContentView: View {
         // VStack --> Vertical
         // HStack --> Horizontal
         VStack {
-            //Command + click --> Extract Subview
-            subvista()
-            subvista()
-            subvista()
-            subvista()
+            //id: \.self --> Indicates that you are going to select each of the data inside the array
+            ForEach(nombres, id:\.self){
+                nombre in Text("\(nombre)")
+            }
         }
     }
 }
@@ -25,17 +24,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct subvista: View {
-    var body: some View {
-        HStack {
-            Text("1.) ")
-            Text("2.) ")
-            Text("3.) ")
-            Text("4.) ")
-            Text("5.) ")
-        }
     }
 }
