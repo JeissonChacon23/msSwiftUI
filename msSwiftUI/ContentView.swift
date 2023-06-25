@@ -14,22 +14,24 @@ struct ContentView: View {
         // HStack --> Horizontal
         NavigationView{
             List{
-                ForEach(nombres, id:\.self){
-                    nombre in
-                    HStack {
-                        VStack(alignment: .leading) {//Command + Click --> Show SwiftUI Ispector
-                            Text("\(nombre)")
-                                .font(.headline)
-                            Text("Hola")
-                                .font(.footnote)
+                ForEach(nombres, id:\.self){ nombre in
+                    NavigationLink(destination: Detalle(nombre: nombre)) {
+                        HStack {
+                            VStack(alignment: .leading) {//Command + Click --> Show SwiftUI Ispector
+                                Text("\(nombre)")
+                                    .font(.headline)
+                                Text("Hola")
+                                    .font(.footnote)
+                            }
+                            Spacer()
+                            Image(systemName: "pencil")
+                                .font(.title) //To make the text larger
                         }
-                        Spacer()
-                        Image(systemName: "pencil")
-                            .font(.title) //To make the text larger
                     }
+                    
                 }
             }
-            .navigationTitle("Full Name")
+            .navigationTitle("Contacts")
         }
     }
 }
