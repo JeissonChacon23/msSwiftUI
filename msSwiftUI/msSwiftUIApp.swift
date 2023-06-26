@@ -11,7 +11,7 @@ import SwiftUI
 struct msSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmpleadosView()
         }
     }
 }

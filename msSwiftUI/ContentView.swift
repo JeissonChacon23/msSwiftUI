@@ -8,27 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    let nombres = ["Jeisson", "Javier", "Chacon", "Parada"]
+    let name = ["Jeisson Chacón", "Leonardo Galvis", "Jessica Laguado", "Valentina Villamizar"]
+    let number = ["0000", "1111", "2222", "3333"]
     var body: some View {
         // VStack --> Vertical
         // HStack --> Horizontal
         NavigationView{
             List{
-                ForEach(nombres, id:\.self){ nombre in
+                ForEach(name, id:\.self){ nombre in
                     NavigationLink(destination: Detalle(nombre: nombre)) {
-                        HStack {
-                            VStack(alignment: .leading) {//Command + Click --> Show SwiftUI Ispector
-                                Text("\(nombre)")
-                                    .font(.headline)
-                                Text("Hola")
-                                    .font(.footnote)
-                            }
-                            Spacer()
-                            Image(systemName: "pencil")
-                                .font(.title) //To make the text larger
-                        }
+                        //Command + Click --> Extract Subview
+                        Fila(nombre: nombre)
                     }
-                    
                 }
             }
             .navigationTitle("Contacts")
@@ -39,5 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
